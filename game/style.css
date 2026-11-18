@@ -1,0 +1,46 @@
+/* The page around the game: a dark frame that centres the canvas and
+   scales it to the window while keeping its 3:2 shape. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #050b16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+#game {
+  width: min(97vw, 150vh, 1152px);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border: 2px solid rgba(255, 217, 122, 0.35);
+  border-radius: 8px;
+  box-shadow: 0 0 60px rgba(255, 200, 100, 0.12), 0 20px 50px rgba(0, 0, 0, 0.6);
+  cursor: crosshair;
+  background: #0a1628;
+}
+
+.hint {
+  color: #7d93a6;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
